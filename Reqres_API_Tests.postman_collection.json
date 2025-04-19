@@ -1,0 +1,18 @@
+{
+  "name": "Get single user",
+  "request": {
+    "method": "GET",
+    "header": [],
+    "url": "https://reqres.in/api/users/2"
+  },
+  "response": [
+    {
+      "name": "Status code is 200",
+      "tests": "pm.test('Status code is 200', () => pm.response.to.have.status(200));"
+    },
+    {
+      "name": "Response has correct email",
+      "tests": "pm.test('Email is present', () => pm.expect(pm.response.json().data.email).to.eq('janet.weaver@reqres.in'));"
+    }
+  ]
+}
